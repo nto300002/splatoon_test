@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'splatoon';
+  src: url('./font/ikamodoki1_0.ttf');
+}
+
+.header {
+  background-color: black;
+  position: fixed;
+  /*基準を画面の左上に*/
+  top: 0;
+  left: 0;
+  /*余白が入らないように*/
+  margin: 0;
+  width: 100%;
+}
+
+.headerTitle {
+  font-family: 'splatoon', sans-serif;
+  color: aliceblue;
+  font-size: 30px;
+  margin-left: 2em;
+  letter-spacing: 0.2em;
+}
+
+.headerList {
+  list-style: none;
+  margin-top: 1em;
+  display: flex;
+}
+
+.moduleMenuIcon {
+  margin-top: 1em;
+}

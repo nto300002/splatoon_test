@@ -1,26 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './component/button.scss'
+import './App.scss'
+import { useNavigate } from "react-router-dom";
+
 
 function App() {
+  const navigate = useNavigate();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='container'>
+          <ul className='btnList'>
+          <li className='btn' onClick={() => navigate('/weaponlist')}></li>
+          <li className='btn' onClick={() => navigate('/head')}></li>
+          <li className='btn' onClick={() => navigate('/armor')}></li>
+          <li className='btn' onClick={() => navigate('/shoes')}></li>
+          </ul>
+      </div>
+ 
   );
 }
 
 export default App;
+// 
+//
+//
+//
