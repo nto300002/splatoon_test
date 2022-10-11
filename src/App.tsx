@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './component/button.scss'
+import './App.scss'
 
+import Home from './Home';
+import { useState } from 'react';
+
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
+import Header from './component/Header';
+import { useNavigate } from 'react-router-dom';
+
+// export const isHome = atom({
+//   key: 'isHome', // unique ID (with respect to other atoms/selectors)
+//   default: true, // default value (aka initial value)
+// });
 function App() {
+  const navigate = useNavigate();
+  const [isHomeComming, setIsHomeComming] = useState(true);
+  const homeHandler = () => {
+    setIsHomeComming(false)
+  }
+  const homeCommingHandler = () => {
+    navigate('/')
+    setIsHomeComming(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container' onClick={homeHandler}>
+        {isHomeComming && <Home/>}
+      </div>
+      {!isHomeComming && <p onClick={homeCommingHandler}>HOMEに戻る</p>}
+    </>
   );
 }
 
 export default App;
+
+

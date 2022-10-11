@@ -1,0 +1,12 @@
+.btnList {
+  display: flex;
+}
+
+.btn {
+  list-style: none;
+  margin: 1.5em;
+  background-color: black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
