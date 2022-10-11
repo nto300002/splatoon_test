@@ -9,7 +9,7 @@ const Header = () => {
     <div className='header'>
       <ul className='headerList'>
         <li className='headerTitle' onClick={() => navigate('/')}>
-          くらべてみなイカ？
+          <span>くらべてみなイカ？</span>
         </li>
         <li className='moduleMenuIcon'>
               <span></span>
