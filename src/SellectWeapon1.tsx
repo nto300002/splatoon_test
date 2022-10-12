@@ -48,7 +48,7 @@ const listitems =  [
 	]
 
 
-const WeaponList = () => {
+const SellectWeapon1 = () => {
   const navigate = useNavigate();
   const handleClickSellectWeapon1 = () => {
     navigate('/sellectweapon1')
@@ -77,4 +77,4 @@ const WeaponList = () => {
   )
 }
 
-export default WeaponList
+export default SellectWeapon1

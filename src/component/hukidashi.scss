@@ -1,0 +1,28 @@
+.hukidashi {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 20px 5em;
+  width: 300px;
+  min-width: 180px;
+  max-width: 100%;
+  color: rgb(250, 250, 250);
+  font-size: 30px;
+  background: #545454;
+  border-radius: 15px;
+  font-family: 'splatoon', sans-serif;
+  letter-spacing: 0.3em;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    margin-left: -15px;
+    border: 20px solid transparent;
+    border-top: 20px solid #545454;
+  }
+}
+
+.textEmphasis {
+  color: rgb(206, 97, 38);
+}
