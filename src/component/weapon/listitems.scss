@@ -1,0 +1,26 @@
+.listitemsUl {
+  font-family: 'splatoon', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.listitemsLi {
+  display: flex;
+  width: 270px;
+  padding: 5px;
+  font-size: 30px;
+  color: rgb(235, 255, 137);
+  list-style: none;
+  background-color: blueviolet;
+  border-radius: 10px;
+}
+
+.listitemsImg {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+
+.listitemsText {
+  margin-left: 1em;
+}
