@@ -1,26 +1,30 @@
-.listitemsUl {
+$cText: #009df5;
+$cBackGround: #b2ee33;
+
+.listitemsUlRight {
   font-family: 'splatoon', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-.listitemsLi {
+.listitemsLiRight {
   display: flex;
   width: 270px;
   padding: 5px;
   font-size: 30px;
-  color: rgb(235, 255, 137);
+  color: $cText;
   list-style: none;
-  background-color: blueviolet;
+  background-color: $cBackGround;
   border-radius: 10px;
 }
 
-.listitemsImg {
+.listitemsImgRight {
   width: 50px;
   height: 50px;
   background-color: black;
 }
 
-.listitemsText {
+.listitemsTextRight {
   margin-left: 1em;
+  text-decoration: none;
 }

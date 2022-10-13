@@ -1,51 +1,9 @@
 import React from 'react'
 import './component/button.scss'
 import '../src/component/hukidashi.scss'
-import '../src/component/weapon/listitems.scss'
-import { useNavigate } from "react-router-dom";
-
-const listitems =  [
-		{
-			id: 1,
-			title: 'チャージャー'
-		},{
-			id: 2,
-			title: 'ブラスター'
-		},{
-			id: 3,
-			title: 'ローラー'
-		},{
-			id: 4,
-			title: 'スロッシャー'
-		},{
-			id: 5,
-			title: 'スピナー'
-		},{
-			id: 6,
-			title: 'ローラー'
-		},{
-			id: 7,
-			title: 'マニューバー'
-		},{
-			id: 8,
-			title: 'シェルター'
-		},{
-			id: 9,
-			title: 'ワイパー'
-		},{
-			id: 10,
-			title: 'ブラスター'
-		},{
-			id: 11,
-			title: 'フデ'
-		},{
-			id: 12,
-			title: 'リールガン'
-		},{
-			id: 13,
-			title: 'シューター'
-		}
-	]
+import '../src/component/weapon/listitemsLeft.scss'
+import { Link, useNavigate } from "react-router-dom";
+import { listitems_category } from './component/weapon/listitems';
 
 
 const SellectWeapon1 = () => {
@@ -63,13 +21,16 @@ const SellectWeapon1 = () => {
         <li className='btn' onClick={handleClickSellectWeapon2}></li>    
       </ul>
       <br />
-      {listitems.map((listitem) => {
+      {listitems_category.map((listitem_category) => {
         return(
-          <ul className='listitemsUl' key={listitem.id}>
-            <li className='listitemsLi'>
-              <span className='listitemsImg'></span>
-                <span className='listitemsText'>{listitem.title}</span>
-            </li>
+          <ul className='listitemsUlLeft' key={listitem_category.id}>          
+            <Link to={listitem_category.url} style={{ textDecoration: 'none' }}><li className='listitemsLiLeft'>
+                <span className='listitemsImgLeft'></span>
+                  <span className='listitemsTextLeft'>
+                    {listitem_category.title}
+                  </span>
+               </li>
+            </Link>
           </ul>
         )
       })}
