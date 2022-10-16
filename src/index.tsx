@@ -5,8 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './component/Header';
 import Footer from './component/Footer';
-import { RouterConfig } from './component/Router/RouterConfig';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
